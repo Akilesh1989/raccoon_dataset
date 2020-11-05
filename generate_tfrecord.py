@@ -82,7 +82,7 @@ def create_tf_example(group, path):
     return tf_example
 
 
-def main(_):
+def main(output_path, image_dir, csv_input):
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
     path = os.path.join(FLAGS.image_dir)
     examples = pd.read_csv(FLAGS.csv_input)
